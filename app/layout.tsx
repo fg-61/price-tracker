@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import './globals.css'
+import { MantineProvider } from '@mantine/core'
 
 const inter = Inter({ subsets: ['latin'] })
 export const spaceGrotesk = Space_Grotesk({
@@ -22,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="max-w-10xl mx-auto">
-          <Navbar />
-          {children}
+        <main style={{ maxWidth: 1440, margin: 'auto' }}>
+          <MantineProvider>
+            <Navbar />
+            {children}
+          </MantineProvider>
         </main>
       </body>
     </html>

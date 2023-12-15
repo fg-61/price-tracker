@@ -115,10 +115,6 @@
         @apply flex justify-between items-center px-6 md:px-20 py-4;
     }
 
-    .nav-logo {
-        @apply font-spaceGrotesk text-[21px] text-secondary font-bold;
-    }
-
     /* PRICE INFO */
     .price-info_card {
         @apply flex-1 min-w-[200px] flex flex-col gap-2 border-l-[3px] rounded-10 bg-white-100 px-5 py-4;
